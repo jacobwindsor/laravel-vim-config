@@ -32,7 +32,7 @@ filetype plugin indent on
 
 " NERDTree
 map <C-e> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0 " Press I to toggle hidden files
 let NERDTreeQuitOnOpen=1
 let NERDTreeDirArrows=1
 let NERDTreeChDirMode=2
