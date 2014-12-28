@@ -20,6 +20,9 @@ Plugin 'ajh17/Spacegray.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " PIV
+Plugin 'spf13/PIV'
+" Fugitive
+Plugin 'tpope/vim-fugitive'
 
 
 " This is where Vundle packages go. For git repositories: Plugin 'vendor/package'. For Vim Scripts: Plugin 'Package'
@@ -53,7 +56,7 @@ nmap sp :split<CR>
 nmap <C-d> :bnext<CR>    " Faster buffer changes
 nmap <C-a> :bprev<CR>   " Faster buffer changes
 nmap <C-x> :bd<CR>  " Close the current buffer"
-nmap <CR> za
+nmap <CR> za    "Toggle fold
 
 "Standard Settings"
 colorscheme spacegray
