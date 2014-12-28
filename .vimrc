@@ -56,7 +56,6 @@ nmap sp :split<CR>
 nmap <C-d> :bnext<CR>    " Faster buffer changes
 nmap <C-a> :bprev<CR>   " Faster buffer changes
 nmap <C-x> :bd<CR>  " Close the current buffer"
-nmap <CR> za    "Toggle fold
 
 "Standard Settings"
 colorscheme spacegray
