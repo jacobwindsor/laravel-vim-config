@@ -19,10 +19,10 @@ Plugin 'ajh17/Spacegray.vim'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-" PIV
-Plugin 'spf13/PIV'
 " Fugitive
 Plugin 'tpope/vim-fugitive'
+" PHP DOcumentor
+Plugin 'PDV--phpDocumentor-for-Vim'
 
 
 " This is where Vundle packages go. For git repositories: Plugin 'vendor/package'. For Vim Scripts: Plugin 'Package'
@@ -48,6 +48,10 @@ set laststatus=2	" Always show the status bar
 set showtabline=2
 set noshowmode	"Hide the default mode text
 
+" PHP Documentor
+inoremap <C-p> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-p> :call PhpDocSingle()<CR> 
+vnoremap <C-P> :call PhpDocRange()<CR> 
 
 " keymaps
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing
