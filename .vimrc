@@ -16,6 +16,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 "colour-scheme
 Plugin 'ajh17/Spacegray.vim'
+" Markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " This is where Vundle packages go. For git repositories: Plugin 'vendor/package'. For Vim Scripts: Plugin 'Package'
 
@@ -43,11 +46,11 @@ set noshowmode	"Hide the default mode text
 
 " keymaps
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing
-nmap vs :vsplit<cr>
-nmap sp :split<cr>
-nmap <C-d> gt<cr>    " Faster tab changes
-nmap <C-a> gT<cr>
-nmap :bdelete <C-x><cr>
+nmap vs :vsplit<CR>
+nmap sp :split<CR>
+nmap <C-d> :bnext<CR>    " Faster buffer changes
+nmap <C-a> :bprev<CR>   " Faster buffer changes
+nmap <C-x> :bd<CR>  " Close the current buffer"
 
 "Standard Settings"
 colorscheme spacegray
@@ -66,3 +69,4 @@ set ignorecase
 set smartcase
 set noerrorbells
 set autowrite
+
