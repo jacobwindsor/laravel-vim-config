@@ -23,6 +23,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-fugitive'
 " PHP DOcumentor
 Plugin 'PDV--phpDocumentor-for-Vim'
+" Ctrlp
+Plugin 'kien/ctrlp.vim'
 
 
 " This is where Vundle packages go. For git repositories: Plugin 'vendor/package'. For Vim Scripts: Plugin 'Package'
@@ -49,9 +51,15 @@ set showtabline=2
 set noshowmode	"Hide the default mode text
 
 " PHP Documentor
-inoremap <C-p> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-p> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR> 
+inoremap <C-d-b> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-d-b> :call PhpDocSingle()<CR> 
+vnoremap <C-d-b> :call PhpDocRange()<CR> 
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*.swp,*.zip,*.so,*/tmp/*
 
 " keymaps
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing
@@ -65,6 +73,7 @@ nmap <C-x> :bd<CR>  " Close the current buffer"
 colorscheme spacegray
 set nowrap
 set tabstop=4
+set shiftwidth=4
 set smarttab
 set tags=tags
 set softtabstop=4
@@ -79,3 +88,11 @@ set smartcase
 set noerrorbells
 set autowrite
 
+" Disable all beeps
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+    autocmd GUIEnter * set visualbell t_vb=
+endif
+
+"Take off automatic folding
+:set foldlevelstart=99
