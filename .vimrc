@@ -19,6 +19,8 @@ Plugin 'ajh17/Spacegray.vim'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+" PIV
+
 
 " This is where Vundle packages go. For git repositories: Plugin 'vendor/package'. For Vim Scripts: Plugin 'Package'
 
@@ -51,6 +53,7 @@ nmap sp :split<CR>
 nmap <C-d> :bnext<CR>    " Faster buffer changes
 nmap <C-a> :bprev<CR>   " Faster buffer changes
 nmap <C-x> :bd<CR>  " Close the current buffer"
+nmap <CR> za
 
 "Standard Settings"
 colorscheme spacegray
