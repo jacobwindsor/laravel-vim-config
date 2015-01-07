@@ -2,8 +2,8 @@ set nocompatible
 set t_Co=256
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
@@ -25,11 +25,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'PDV--phpDocumentor-for-Vim'
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
+" NERD Commenter
+Plugin 'scrooloose/nerdcommenter'
 
 
-" This is where Vundle packages go. For git repositories: Plugin 'vendor/package'. For Vim Scripts: Plugin 'Package'
 
-" Now we can turn our filetype functionality back on
+" All plugins must be defined before here
+call vundle#end()
 filetype plugin indent on
 
 " NERDTree
@@ -42,7 +44,7 @@ let NERDTreeHighlightCursorline=1
 
 " vim-airline
 set encoding=utf-8
-set guifont=Sauce\ Code\ Powerline:h15	"Install the font on host Putty 'powerline/fonts'
+set guifont=Meslo\ LG\ M\ for\ Powerline	"Install the font on host Putty 'powerline/fonts'
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts = 1
 set term=xterm-256color
