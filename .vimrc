@@ -21,8 +21,12 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Fugitive
 Plugin 'tpope/vim-fugitive'
-" PHP DOcumentor
-Plugin 'PDV--phpDocumentor-for-Vim'
+" VMustache
+Plugin 'tobyS/vmustache'
+" Ultisnips
+Plugin 'SirVer/ultisnips'
+" PDV
+Bundle 'tobyS/PDV'
 " Ctrlp
 Plugin 'kien/ctrlp.vim'
 " Commentary
@@ -33,6 +37,10 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 " Gundo
 Plugin 'sjl/gundo.vim'
+" PHP
+Plugin 'StanAngeloff/php.vim'
+" PHP QA Tools
+Bundle 'joonty/vim-phpqa.git'
 
 " All plugins must be defined before here
 call vundle#end()
@@ -59,10 +67,21 @@ set laststatus=2	" Always show the status bar
 set showtabline=2
 set noshowmode	"Hide the default mode text
 
+" UltiSnips
+let g:pdv_template_dir = $HOME ."/.vim/snip_templates/"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+
 " PHP Documentor
-inoremap <C-h> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-h> :call PhpDocSingle()<CR> 
-vnoremap <C-h> :call PhpDocRange()<CR> 
+inoremap <C-h> <ESC>:call pdv#DocumentWithSnip()<CR>i 
+nnoremap <C-h> :call pdv#DocumentWithSnip()<CR> 
+vnoremap <C-h> :call pdv#DocumentWithSnip()<CR> 
+
+" PHP QA
+let g:phpqa_messdetector_autorun = 1
+let g:phpqa_codesniffer_args = "--standard=~/.vim/rulesets/phpcs.xml"
+let g:phpqa_messdetector_ruleset = "~/.vim/rulesets/phpmd.xml"
 
 "CtrlP
 let g:ctrlp_map = '<c-p>'
@@ -90,11 +109,12 @@ set shiftwidth=4
 set smarttab
 set tags=tags
 set softtabstop=4
+set autoindent
+set copyindent
+set pastetoggle=<F2>
 set expandtab
 set shiftround
-set autoindent
 set backspace=indent,eol,start	" allow backspaceing over evetyting in insert mode
-set copyindent
 set number
 set ignorecase
 set smartcase
