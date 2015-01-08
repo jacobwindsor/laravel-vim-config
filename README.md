@@ -1,9 +1,12 @@
 # Vim configuration
 
 ## Introduction
-This is a vim configuration that has been designed to replace a PHP IDE. 
+A vim configuration designed for PHP and optimised for Laravel. 
 
 ##Installation
+This installation assumes running on an ubuntu system. However, changing the installation
+steps for another OS shouldn't be too dificult.
+
 * Run `sudo apt-get install vim`
 + Clone this repo into the `~/.vim` directory
 * Setup vundle: `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim` 
@@ -31,7 +34,7 @@ Fonts are from [powerline/fonts](https://github.com/powerline/fonts).
 Some key mappings for ctags have been used. To install ctags run `sudo apt-get install exuberant-ctags`.
 Then in your working directory run `ctags -R` to generate the ctags file. You can then hit <kbd>CTRL</kbd>+<kbd>p</kbd> to bring up ctrlP and search tags.
 
-###Fast saving
+####Fast saving
 The configuration has a key map of <kbd>CTRL</kbd>+<kbd>S</kbd> to save a file, as is common in most text editors.
 However, in most terminals this will freeze the terminal so some things must be added to your `.bashrc` file to stop this:
 
@@ -39,3 +42,14 @@ However, in most terminals this will freeze the terminal so some things must be 
 * Append `stty ixany` to the bottom of the file.
 * Append `stty ixoff -ixon` to the bottom of the file.
 * Exit vim.
+
+####Codesniffer and Mess Detector
+The package uses PHP QA Tools to check for code errors. Custom Code Sniffer and Mess Detector rulesets have been included
+that are complementary to Laravel. Ofcourse these can be easily customised and are defined in the *rulesets/* file.
+
+To utilise PHP QA some prerequisites must be installed:
+
+* `sudo apt-get install php-pear` (if not already installed)
+* `sudo pear install PHP_CodeSniffer`
+* `sudo pear channel-discover pear.phpmd.org`
+* `sudo pear install phpmd/PHP_PMD-1.5.0`
