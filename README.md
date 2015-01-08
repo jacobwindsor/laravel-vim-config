@@ -1,4 +1,7 @@
-# Vim Configuration
+# Vim configuration
+
+## Introduction
+This is a vim configuration that has been designed to replace a PHP IDE. 
 
 ##Installation
 * Run `sudo apt-get install vim`
@@ -26,3 +29,13 @@ Fonts are from [powerline/fonts](https://github.com/powerline/fonts).
 
 ####Ctags
 Some key mappings for ctags have been used. To install ctags run `sudo apt-get install exuberant-ctags`.
+Then in your working directory run `ctags -R` to generate the ctags file. You can then hit <kbd>CTRL</kbd>+<kbd>p</kbd> to bring up ctrlP and search tags.
+
+###Fast saving
+The configuration has a key map of <kbd>CTRL</kbd>+<kbd>S</kbd> to save a file, as is common in most text editors.
+However, in most terminals this will freeze the terminal so some things must be added to your `.bashrc` file to stop this:
+
+* `vim ~/.bashrc`
+* Append `stty ixany` to the bottom of the file.
+* Append `stty ixoff -ixon` to the bottom of the file.
+* Exit vim.
