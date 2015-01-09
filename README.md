@@ -60,9 +60,21 @@ The package is useful in retrieving omnicomplete data for composer (i.e Laravel)
 You can remove this package by deleting the Plugin from `.vimrc`, if not you will be asked to scan the composer classmaps on initially starting vim.
 
 ##Key maps
-| Key | Function |
-| --- | --- |
-| <kbd>CTRL</kbd>+<kbd>s</kbd> | Save |
-| <kbd>CTRL</kbd>+<kbd>x</kbd> | Exit the current buffer |
-| <kbd>CTRL</kbd>+<kbd>e</kbd> | Open the NERDTree |
-
+| Key | Function | Mode |
+| --- | --- | --- |
+| <kbd>CTRL</kbd>+<kbd>s</kbd> | Save | Normal |
+| <kbd>CTRL</kbd>+<kbd>x</kbd> | Exit the current buffer | Normal |
+| <kbd>CTRL</kbd>+<kbd>e</kbd> | Toggle the NERDTree | Normal |
+| <kbd>v</kbd>,<kbd>s</kbd> | Open a vertical split | Normal |
+| <kbd>s</kbd>,<kbd>p</kbd> | Open a horizontal split | Normal |
+| <kbd>CTRL</kbd>+<kbd>w</kbd>,<kbd>CTRL</kbd>+<kbd>w</kbd> | Change active split | Normal |
+| <kbd>CTRL</kbd>+<kbd>d</kbd> | Next buffer | Normal |
+| <kbd>CTRL</kbd>+<kbd>a</kbd> | Previous buffer | Normal |
+| <kbd>F5</kbd> | Bring up the Gundo history menu | Normal |
+| <kbd>F2</kbd> | Toggle paste mode | Insert |
+| <kbd>CTRL></kbd>+<kbd>h</kbd> | Add a PHP DocBlock at current line | Any |
+| <kbd>TAB</kbd> | Open omnicomplete | Insert |
+| <kbd>CTRL</kbd>+<kbd>e</kbd> (when omnicomplete open) | Close omnicomplete and return to first word | Insert |
+| <kbd>CTRL</kbd>+<kbd>p</kbd> | Open CtrlP | Normal |
+| <kbd>g</kbd>,<kbd>c</kbd>,<kbd>c</kbd> | Toggle line commented | Normal, visual | 
+| <kbd>c</kbd>,<kbd>s</kbd> | See [here](https://github.com/tpope/vim-surround) for further information | Normal, visual |
