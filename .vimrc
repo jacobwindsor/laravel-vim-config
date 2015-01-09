@@ -9,7 +9,6 @@ call vundle#begin()
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
 Plugin 'gmarik/vundle'
-
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 " vim-airline
@@ -41,6 +40,11 @@ Plugin 'sjl/gundo.vim'
 Plugin 'StanAngeloff/php.vim'
 " PHP QA Tools
 Bundle 'joonty/vim-phpqa.git'
+" PHP complete
+Bundle 'Shougo/vimproc'
+Bundle 'm2mdas/phpcomplete-extended'
+" Supertab
+Plugin 'ervandew/supertab'
 
 " All plugins must be defined before here
 call vundle#end()
@@ -72,7 +76,6 @@ let g:pdv_template_dir = $HOME ."/.vim/snip_templates/"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-
 " PHP Documentor
 inoremap <C-h> <ESC>:call pdv#DocumentWithSnip()<CR>i 
 nnoremap <C-h> :call pdv#DocumentWithSnip()<CR> 
@@ -92,6 +95,22 @@ set wildignore+=*.swp,*.zip,*.so,*/tmp/*
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 let g:gundo_close_on_revert = 1
+
+" Omincomplete
+highlight Pmenu ctermbg=238 gui=bold
+set completeopt-=preview
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+"PHP complete_extended
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+let g:phpcomplete_index_composer_command="composer"
+
+" Supertab
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " keymaps
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing
