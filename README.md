@@ -53,3 +53,16 @@ To utilise PHP QA some prerequisites must be installed:
 * `sudo pear install PHP_CodeSniffer`
 * `sudo pear channel-discover pear.phpmd.org`
 * `sudo pear install phpmd/PHP_PMD-1.5.0`
+
+####Omnicomplete
+The configuration use phpcomplete-extended for additional omnicomplete settings. 
+The package is useful in retrieving omnicomplete data for composer (i.e Laravel) projetcts although is not neccesary with ctags.
+You can remove this package by deleting the Plugin from `.vimrc`, if not you will be asked to scan the composer classmaps on initially starting vim.
+
+##Key maps
+| Key | Function |
+| --- | --- |
+| <kbd>CTRL</kbd>+<kbd>s</kbd> | Save |
+| <kbd>CTRL</kbd>+<kbd>x</kbd> | Exit the current buffer |
+| <kbd>CTRL</kbd>+<kbd>e</kbd> | Open the NERDTree |
+
