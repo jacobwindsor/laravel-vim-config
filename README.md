@@ -55,8 +55,8 @@ To utilise PHP QA some prerequisites must be installed:
 * `sudo pear install phpmd/PHP_PMD-1.5.0`
 
 ####Omnicomplete
-The configuration use phpcomplete-extended for additional omnicomplete settings. 
-The package is useful in retrieving omnicomplete data for composer (i.e Laravel) projetcts although is not neccesary with ctags.
+The configuration uses phpcomplete-extended for additional omnicomplete settings. 
+The package is useful in retrieving omnicomplete data for composer (i.e Laravel) projects although is not neccesary with ctags.
 You can remove this package by deleting the Plugin from `.vimrc`, if not you will be asked to scan the composer classmaps on initially starting vim.
 
 ##Key maps
@@ -72,9 +72,9 @@ You can remove this package by deleting the Plugin from `.vimrc`, if not you wil
 | <kbd>CTRL</kbd>+<kbd>a</kbd> | Previous buffer | Normal |
 | <kbd>F5</kbd> | Bring up the Gundo history menu | Normal |
 | <kbd>F2</kbd> | Toggle paste mode | Insert |
-| <kbd>CTRL></kbd>+<kbd>h</kbd> | Add a PHP DocBlock at current line | Any |
+| <kbd>CTRL</kbd>+<kbd>h</kbd> | Add a PHP DocBlock at current line | Any |
 | <kbd>TAB</kbd> | Open omnicomplete | Insert |
 | <kbd>CTRL</kbd>+<kbd>e</kbd> (when omnicomplete open) | Close omnicomplete and return to first word | Insert |
 | <kbd>CTRL</kbd>+<kbd>p</kbd> | Open CtrlP | Normal |
 | <kbd>g</kbd>,<kbd>c</kbd>,<kbd>c</kbd> | Toggle line commented | Normal, visual | 
-| <kbd>c</kbd>,<kbd>s</kbd> | See [here](https://github.com/tpope/vim-surround) for further information | Normal, visual |
+| <kbd>c</kbd>,<kbd>s</kbd> | Click [here](https://github.com/tpope/vim-surround) for further information | Normal, visual |
