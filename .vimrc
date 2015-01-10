@@ -45,6 +45,9 @@ Bundle 'Shougo/vimproc'
 Bundle 'm2mdas/phpcomplete-extended'
 " Supertab
 Plugin 'ervandew/supertab'
+" PHP refactoring
+Bundle 'vim-php/vim-php-refactoring'
+
 
 " All plugins must be defined before here
 call vundle#end()
@@ -86,6 +89,7 @@ let g:phpqa_messdetector_autorun = 1
 let g:phpqa_codesniffer_args = "--standard=~/.vim/rulesets/phpcs.xml"
 let g:phpqa_messdetector_ruleset = "~/.vim/rulesets/phpmd.xml"
 
+
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPTag'
@@ -111,6 +115,9 @@ let g:phpcomplete_index_composer_command="composer"
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
+" PHP refactoring
+let g:php_refactor_command='php ~/.vim/refactor/refactor.phar'
 
 " keymaps
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing

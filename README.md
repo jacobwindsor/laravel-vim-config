@@ -78,3 +78,4 @@ You can remove this package by deleting the Plugin from `.vimrc`, if not you wil
 | <kbd>CTRL</kbd>+<kbd>p</kbd> | Open CtrlP | Normal |
 | <kbd>g</kbd>,<kbd>c</kbd>,<kbd>c</kbd> | Toggle line commented | Normal, visual | 
 | <kbd>c</kbd>,<kbd>s</kbd> | Click [here](https://github.com/tpope/vim-surround) for further information | Normal, visual |
+| <kbd>\</kbd>,<kbd>r</kbd> | Open PHP refactoring tools | Visual mode |
