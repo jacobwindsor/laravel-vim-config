@@ -2,7 +2,7 @@
  * ${1:{Short Description}}
  *
  * ${2:{Long Description}}
-
+ *
  * @category ${3:{Category}}
  * @package  ${4:{package}}
  * @author   {{author}}

@@ -47,7 +47,8 @@ Bundle 'm2mdas/phpcomplete-extended'
 Plugin 'ervandew/supertab'
 " PHP refactoring
 Bundle 'vim-php/vim-php-refactoring'
-
+" Blade syntax
+Plugin 'xsbeats/vim-blade'
 
 " All plugins must be defined before here
 call vundle#end()
@@ -89,6 +90,20 @@ let g:phpqa_messdetector_autorun = 1
 let g:phpqa_codesniffer_args = "--standard=~/.vim/rulesets/phpcs.xml"
 let g:phpqa_messdetector_ruleset = "~/.vim/rulesets/phpmd.xml"
 
+" Quick fix window
+au FileType qf call MoveAndResize()
+function MoveAndResize()
+    wincmd L
+    vertical res 45
+endfunction
+
+nmap <Leader>ec :lcl<CR>
+nmap <Leader>en :lne<CR>
+imap <Leader>en <ESC>:lne<CR>i
+vmap <Leader>en <ESC>:lne<CR>i
+nmap <Leader>ep :lp<CR>
+imap <Leader>ep <ESC>:lp<CR>i
+vmap <Leader>ep <ESC>:lp<CR>
 
 "CtrlP
 let g:ctrlp_map = '<c-p>'
@@ -129,7 +144,6 @@ nmap <C-x> :bd<CR>  " Close the current buffer"
 
 "Standard Settings"
 colorscheme spacegray
-set nowrap
 set tabstop=4
 set shiftwidth=4
 set smarttab
@@ -153,5 +167,18 @@ if has('autocmd')
     autocmd GUIEnter * set visualbell t_vb=
 endif
 
-"Take off automatic folding
-:set foldlevelstart=99
+" Swap files out of the project root
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+
+" Syntax highlighting
+au BufNewFile,BufRead *.blade.php set filetype=blade " Set blade extension syntax
+
+" Folding
+set foldmethod=syntax
+let php_folding=1
+let javaScript_fold=1
+let xml_syntax_folding=1
+set foldlevelstart=1
+autocmd BufWinLeave *.* mkview " Save folds when quitting
+autocmd BufWinEnter *.* silent loadview " Save folds when quitting
