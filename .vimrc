@@ -115,6 +115,7 @@ set wildignore+=*.swp,*.zip,*.so,*/tmp/*
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 let g:gundo_close_on_revert = 1
+set hidden " stops undo history deleting after buffer change
 
 " Omincomplete
 highlight Pmenu ctermbg=238 gui=bold
