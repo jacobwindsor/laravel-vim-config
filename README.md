@@ -79,3 +79,5 @@ You can remove this package by deleting the Plugin from `.vimrc`, if not you wil
 | <kbd>g</kbd>,<kbd>c</kbd>,<kbd>c</kbd> | Toggle line commented | Normal, visual | 
 | <kbd>c</kbd>,<kbd>s</kbd> | Surround: Click [here](https://github.com/tpope/vim-surround) for further information | Normal, visual |
 | `<leader>`,<kbd>r</kbd> | Open PHP refactoring tools | Visual mode |
+##Snippets
+Some blade snippets have been included in the `.vim/UltiSnips` directory. To use them type in the name of the snippet followed by `<leader>,<kbd>s</kbd>,<kbd>n</kbd>` in your Blade template. I.e to create a new form type `newform` then `\sn`. Run `:help UltiSnips` to get more information on snippets. 
