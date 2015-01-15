@@ -1,0 +1,53 @@
+snippet newform "Create a new Laravel/Foundation form"
+<!--${1:Type of form} form-->
+{!! Form::open(['route' => '${2:route}',${3: 'files' => true,} 'method' => 'post', 'data-abide' => ''] ) !!}
+	${0:content}	
+{!! Form::close() !!}
+endsnippet
+
+snippet textfield "Create a new Laravel/Foundation text-field"
+<!--Form ${1:type}-field-->
+{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
+{!! Form::text('$1', ${2:value}, [${3:'required' => '', }'placeholder' => '${4:placeholder}'${5:, 'pattern' => '${6:Abide validation pattern}'}]) !!}
+<small class="error">${7:Error message}</small>
+$0
+endsnippet
+
+snippet emailfield "Create a new Laravel/Foundation email-field"
+<!--Form email-field-->
+{!! Form::label('email', 'Your email:') !!}
+{!! Form::email('email', ${1:value}, [${3:'required' => ''}, 'placeholder' => '${2:placeholder}', 'pattern' => 'email']) !!}
+<small class="error">You must enter a valid email address.</small>
+$0
+endsnippet
+
+snippet submitbutton "Create a new Laravel/Foundation submit button"
+{!--Submit-button-->
+<div class="text-center">
+	{!! Form::submit('${1:Value}', ['class' => 'button radius ${2:null,success,secondary,alert,info,disabled}']) !!}
+</div>
+endsnippet
+
+snippet filefield "Create a new Laravel/Foundation File picker"
+<!--Form ${1:type}-field-->
+{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
+{!! Form::file('$1', ${2:['required' => '']}) !!}
+${3:<small class="error">You must select a $1.</small>}
+$0
+endsnippet
+
+snippet textarea "Create a new Laravel/Foundation text area"
+<!--Form ${1:type}-field-->
+{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
+{!! Form::textarea('$1', ${2:value}, [${3:'required' => '', }'placeholder' => '${4:placeholder}'${5:, 'pattern' => '${6:Abide validation pattern}'}]) !!}
+<small class="error">${7:error}</small>
+$0
+endsnippet
+
+snippet password "Create a new Laravel/Foundation password field"
+<!-- Form password-field-->
+{!! Form::label('password', 'Your password:') !!}
+{!! Form::password('password', null, [${3:'required' => '', }'placeholder' => '${4:placeholder}'${5:, 'pattern' => '${6:Abide validation pattern}'}] !!}
+<small class="error">${7:error}</small>
+$0
+endsnippet

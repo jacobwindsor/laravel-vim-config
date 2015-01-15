@@ -75,8 +75,8 @@ set laststatus=2	" Always show the status bar
 set showtabline=2
 set noshowmode	"Hide the default mode text
 
-" UltiSnips
-let g:pdv_template_dir = $HOME ."/.vim/snip_templates/"
+"UltiSnips
+let g:UltiSnipsExpandTrigger="<Leader>sn"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
@@ -84,6 +84,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 inoremap <C-h> <ESC>:call pdv#DocumentWithSnip()<CR>i 
 nnoremap <C-h> :call pdv#DocumentWithSnip()<CR> 
 vnoremap <C-h> :call pdv#DocumentWithSnip()<CR> 
+let g:pdv_template_dir = $HOME ."/.vim/DocBlocks/"
 
 " PHP QA
 let g:phpqa_messdetector_autorun = 1
