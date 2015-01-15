@@ -136,6 +136,7 @@ let g:php_refactor_command='php ~/.vim/refactor/refactor.phar'
 
 " keymaps
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing
+imap <C-s> <ESC>:w<CR>i
 nmap vs :vsplit<CR>
 nmap sp :split<CR>
 nmap <C-d> :bnext<CR>    " Faster buffer changes
