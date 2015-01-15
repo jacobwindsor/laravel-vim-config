@@ -81,11 +81,11 @@ You can remove this package by deleting the Plugin from `.vimrc`, if not you wil
 | `<leader>`,<kbd>r</kbd> | Open PHP refactoring tools | Visual mode |
 ##Snippets
 Some blade snippets have been included in the `.vim/UltiSnips` directory. To use them type in the name of the snippet followed by 
-`<leader>,<kbd>s</kbd>,<kbd>n</kbd>` in your Blade template. I.e to create a new form type `newform` then `\sn`. 
+<leader>,<kbd>s</kbd>,<kbd>n</kbd> in your Blade template. I.e to create a new form type `newform` then <kbd>\sn</kbd>. 
 Run `:help UltiSnips` to get more information on snippets.
 
 Snippets contain tabstops to allow you to easily edit information in them. To jump to the next tabstop hit <kbd>CTRL</kbd>+<kbd>d</kbd> and 
 to go to the previous tabstop hit <kbd>CTRL</kbd>+<kbd>z</kbd>
 ##Configuration
 ###Leader
-The leader key is set to <kbd>,</kbd> and is usef for many key mappings. To change this add the line `let mapleader=` followed by the key of choice.
+The leader key is set to <kbd>\</kbd> and is used in many key mappings. To change this add the line `let mapleader=` followed by the key of choice.

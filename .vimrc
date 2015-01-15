@@ -137,7 +137,6 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:php_refactor_command='php ~/.vim/refactor/refactor.phar'
 
 " keymaps
-let mapleader=","
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing
 imap <C-s> <ESC>:w<CR>i
 nmap vs :vsplit<CR>
