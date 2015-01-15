@@ -88,4 +88,4 @@ Snippets contain tabstops to allow you to easily edit information in them. To ju
 to go to the previous tabstop hit <kbd>CTRL</kbd>+<kbd>z</kbd>
 ##Configuration
 ###Leader
-The leader key is set to <kbd>\</kbd> and is used in many key mappings. To change this add the line `let mapleader=` followed by the key of choice.
+The leader key is set to `\` and is used in many key mappings. To change this add the line `let mapleader=` followed by the key of choice.
