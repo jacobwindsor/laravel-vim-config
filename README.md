@@ -72,7 +72,7 @@ You can remove this package by deleting the Plugin from `.vimrc`, if not you wil
 | <kbd>CTRL</kbd>+<kbd>a</kbd> | Previous buffer | Normal |
 | <kbd>F5</kbd> | Bring up the Gundo history menu | Normal |
 | <kbd>F2</kbd> | Toggle paste mode | Insert |
-| <kbd>CTRL</kbd>+<kbd>h</kbd> | Add a PHP DocBlock at current line | Any |
+| `<leader>`,<kbd>d</kbd>,<kbd>b</kbd> | Add a PHP DocBlock at current line | Any |
 | <kbd>TAB</kbd> | Open omnicomplete | Insert |
 | <kbd>CTRL</kbd>+<kbd>e</kbd> (when omnicomplete open) | Close omnicomplete and return to first word | Insert |
 | <kbd>CTRL</kbd>+<kbd>p</kbd> | Open CtrlP | Normal |
@@ -80,4 +80,12 @@ You can remove this package by deleting the Plugin from `.vimrc`, if not you wil
 | <kbd>c</kbd>,<kbd>s</kbd> | Surround: Click [here](https://github.com/tpope/vim-surround) for further information | Normal, visual |
 | `<leader>`,<kbd>r</kbd> | Open PHP refactoring tools | Visual mode |
 ##Snippets
-Some blade snippets have been included in the `.vim/UltiSnips` directory. To use them type in the name of the snippet followed by `<leader>,<kbd>s</kbd>,<kbd>n</kbd>` in your Blade template. I.e to create a new form type `newform` then `\sn`. Run `:help UltiSnips` to get more information on snippets. 
+Some blade snippets have been included in the `.vim/UltiSnips` directory. To use them type in the name of the snippet followed by 
+`<leader>,<kbd>s</kbd>,<kbd>n</kbd>` in your Blade template. I.e to create a new form type `newform` then `\sn`. 
+Run `:help UltiSnips` to get more information on snippets.
+
+Snippets contain tabstops to allow you to easily edit information in them. To jump to the next tabstop hit <kbd>CTRL</kbd>+<kbd>d</kbd> and 
+to go to the previous tabstop hit <kbd>CTRL</kbd>+<kbd>z</kbd>
+##Configuration
+###Leader
+The leader key is set to <kbd>,</kbd> and is usef for many key mappings. To change this add the line `let mapleader=` followed by the key of choice.

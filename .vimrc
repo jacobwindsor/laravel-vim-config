@@ -81,9 +81,9 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " PHP Documentor
-inoremap <C-h> <ESC>:call pdv#DocumentWithSnip()<CR>i 
-nnoremap <C-h> :call pdv#DocumentWithSnip()<CR> 
-vnoremap <C-h> :call pdv#DocumentWithSnip()<CR> 
+inoremap <leader>db <ESC>:call pdv#DocumentWithSnip()<CR>i 
+nnoremap <leader>db :call pdv#DocumentWithSnip()<CR> 
+vnoremap <leader>db :call pdv#DocumentWithSnip()<CR> 
 let g:pdv_template_dir = $HOME ."/.vim/DocBlocks/"
 
 " PHP QA
@@ -136,6 +136,7 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:php_refactor_command='php ~/.vim/refactor/refactor.phar'
 
 " keymaps
+let mapleader=","
 nmap <C-s> :w<CR>	" Make sure to add 'stty ixany' and 'stty ixoff -ixon' to .bashrc to disable freezing
 imap <C-s> <ESC>:w<CR>i
 nmap vs :vsplit<CR>
