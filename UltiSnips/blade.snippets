@@ -7,17 +7,21 @@ endsnippet
 
 snippet textfield "Create a new Laravel/Foundation text-field"
 <!--Form ${1:type}-field-->
-{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
-{!! Form::text('$1', ${2:value}, [${3:'required' => '', }'placeholder' => '${4:placeholder}'${5:, 'pattern' => '${6:alpha,alpha_numeric,inte    ger,number,card,cvv,email,url,domain,datetime,date,time,month_day_year,color,[REGEX]}'}]) !!}
-<small class="error">${7:Error message}</small>
+<div class="$1-field">
+	{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
+	{!! Form::text('$1', ${2:value}, [${3:'required' => '', }'placeholder' => '${4:placeholder}'${5:, 'pattern' => '${6:alpha,alpha_numeric,inte    ger,number,card,cvv,email,url,domain,datetime,date,time,month_day_year,color,[REGEX]}'}]) !!}
+	<small class="error">${7:Error message}</small>
+</div>
 $0
 endsnippet
 
 snippet emailfield "Create a new Laravel/Foundation email-field"
 <!--Form email-field-->
-{!! Form::label('email', 'Your email:') !!}
-{!! Form::email('email', ${1:value}, [${3:'required' => ''}, 'placeholder' => '${2:placeholder}', 'pattern' => 'email']) !!}
-<small class="error">You must enter a valid email address.</small>
+<div class="email-field">
+	{!! Form::label('email', 'Your email:') !!}
+	{!! Form::email('email', ${1:value}, [${3:'required' => ''}, 'placeholder' => '${2:placeholder}', 'pattern' => 'email']) !!}
+	<small class="error">You must enter a valid email address.</small>
+</div>
 $0
 endsnippet
 
@@ -30,25 +34,31 @@ endsnippet
 
 snippet filefield "Create a new Laravel/Foundation File picker"
 <!--Form ${1:type}-field-->
-{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
-{!! Form::file('$1', ${2:['required' => '']}) !!}
-${3:<small class="error">${4:You must select a $1.}</small>}
+<div class="$1-field">
+    <button class="fileInputClicker button radius">Select $1</button>
+	{!! Form::file('$1', ${2:['required' => '', }'class' => 'hide-input']) !!}
+	${3:<small class="error">${4:You must select a $1.}</small>}
+</div>
 $0
 endsnippet
 
 snippet textarea "Create a new Laravel/Foundation text area"
 <!--Form ${1:type}-field-->
-{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
-{!! Form::textarea('$1', ${2:value}, [${3:'required' => '', }'placeholder' => '${4:placeholder}'${5:, 'pattern' => '${6:alpha,alpha_numeric,integer,number,card,cvv,email,url,domain,datetime,date,time,month_day_year,color,[REGEX]}'}]) !!}
-${7:<small class="error">${8:error}</small>}
+<div class="$1-field">
+	{!! Form::label('$1', '${1/\w+\s*/\u$0/}:') !!}
+	{!! Form::textarea('$1', ${2:value}, [${3:'required' => '', }'placeholder' => '${4:placeholder}'${5:, 'pattern' => '${6:alpha,alpha_numeric,integer,number,card,cvv,email,url,domain,datetime,date,time,month_day_year,color,[REGEX]}'}]) !!}
+	${7:<small class="error">${8:error}</small>}
+</div>
 $0
 endsnippet
 
 snippet password "Create a new Laravel/Foundation password field"
 <!-- Form password-field-->
-{!! Form::label('password', 'Your password:') !!}
-{!! Form::password('password', null, [${3:'required' => '', }'placeholder' => '${4:placeholder}', 'pattern' => 'alpha_numeric'}] !!}
-<small class="error">${7:error}</small>
+<div class="password-field">
+	{!! Form::label('password', 'Your password:') !!}
+	{!! Form::password('password', null, [${3:'required' => '', }'placeholder' => '${4:placeholder}', 'pattern' => 'alpha_numeric'}] !!}
+	<small class="error">${7:error}</small>
+</div>
 $0
 endsnippet
 

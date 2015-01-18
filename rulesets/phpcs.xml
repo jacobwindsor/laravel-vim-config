@@ -25,5 +25,9 @@
     <rule ref="Internal.NoCodeFound">
         <exclude-pattern>*/views/*</exclude-pattern>
     </rule>
+    <rule ref="Squiz.Commenting">
+        <exclude name="Squiz.Commenting.ClosingDeclarationComment"/>
+        <exclude name="Squiz.Commenting.FileComment"/>
+    </rule>
 
 </ruleset>
