@@ -8,7 +8,7 @@ call vundle#begin()
 " This is the Vundle package, which can be found on GitHub.
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 " vim-airline
@@ -40,15 +40,17 @@ Plugin 'sjl/gundo.vim'
 Plugin 'StanAngeloff/php.vim'
 " PHP QA Tools
 Bundle 'joonty/vim-phpqa.git'
-" PHP complete
-Bundle 'Shougo/vimproc'
-Bundle 'm2mdas/phpcomplete-extended'
 " Supertab
 Plugin 'ervandew/supertab'
 " PHP refactoring
 Bundle 'vim-php/vim-php-refactoring'
 " Blade syntax
 Plugin 'xsbeats/vim-blade'
+" PHP-complete
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle 'm2mdas/phpcomplete-extended'
+Bundle 'm2mdas/phpcomplete-extended-laravel'
 
 " All plugins must be defined before here
 call vundle#end()
@@ -108,7 +110,6 @@ vmap <Leader>ep <ESC>:lp<CR>
 
 "CtrlP
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPTag'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*.swp,*.zip,*.so,*/tmp/*
 
@@ -127,11 +128,11 @@ inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDow
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 "PHP complete_extended
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+autocmd  FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 let g:phpcomplete_index_composer_command="composer"
 
 " Supertab
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " PHP refactoring
 let g:php_refactor_command='php ~/.vim/refactor/refactor.phar'
